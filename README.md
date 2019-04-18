@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-rex
 # How to install
 
 ```
-npm install rex-icons@1.2.0 --save
+npm install rex-icons@1.2.1 --save
 ```
 
 ## What you can do
@@ -75,7 +75,7 @@ For development mode:
 <!-- ReX Core -->
 <link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.development.css" rel="stylesheet">
 <!-- rex-icons -->
-<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.0/rex-icons.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.1/rex-icons.development.css" rel="stylesheet">
 ```
 
 For production mode:
@@ -84,7 +84,7 @@ For production mode:
 <!-- ReX Core -->
 <link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.production.min.css" rel="stylesheet">
 <!-- rex-icons -->
-<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.0/rex-icons.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.1/rex-icons.production.min.css" rel="stylesheet">
 ```
 
 Example: 
