@@ -1,5 +1,5 @@
 # ReX React UI Components Library
-## ReX React UI Component: rex-icons
+## ReX React UI Component: __COMPONENT_NAME__
 
 This project is part of ReX Design Language and it can be used to create React UI Components.   
 For more information visit:   
@@ -20,7 +20,7 @@ https://www.npmjs.com/org/rakuten-rex
 # How to install
 
 ```
-npm install rex-icons@1.2.1 --save
+npm install __COMPONENT_NAME__@__VERSION__ --save
 ```
 
 ## What you can do
@@ -31,7 +31,7 @@ ReX Icons take balance between functionality and friendliness, to be understanda
 
 For a complete guide of properties for React and HTML classes please visit the Storybook site:  
 
-https://rakuten-rex.github.io/rex-icons/
+https://rakuten-rex.github.io/__COMPONENT_NAME__/
 
 ### JavaScript modules
 
@@ -43,7 +43,7 @@ Example:
 
 ```js
 import 'rex-core'; // ReX Core dependency
-import Icon from 'rex-icons';
+import Icon from '__COMPONENT_NAME__';
 
 function MyComponent() {
   return <Icon name='cart-f' />;
@@ -58,7 +58,7 @@ Example:
 
 ```js
 import 'rex-core/css'; // ReX Core dependency
-import 'rex-icons/css';
+import '__COMPONENT_NAME__/css';
 
 function MyComponent() {
   return <span aria-hidden="true" class="rex-icon cart-f"></span>;
@@ -73,18 +73,18 @@ For development mode:
 
 ```markdown
 <!-- ReX Core -->
-<link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.development.css" rel="stylesheet">
-<!-- rex-icons -->
-<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.1/rex-icons.development.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.development.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
+<link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.development.css" rel="stylesheet">
 ```
 
 For production mode:
 
 ```markdown
 <!-- ReX Core -->
-<link href="https://r.r10s.jp/com/rex/rex-core/1.4.0/rex-core.production.min.css" rel="stylesheet">
-<!-- rex-icons -->
-<link href="https://r.r10s.jp/com/rex/rex-icons/1.2.1/rex-icons.production.min.css" rel="stylesheet">
+<link href="https://r.r10s.jp/com/rex/rex-core/__REX_CORE_VERSION__/rex-core.production.min.css" rel="stylesheet">
+<!-- __COMPONENT_NAME__ -->
+<link href="https://r.r10s.jp/com/rex/__COMPONENT_NAME__/__VERSION__/__COMPONENT_NAME__.production.min.css" rel="stylesheet">
 ```
 
 Example: 
@@ -105,7 +105,7 @@ npm start
 
 ## How to build
 
-The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/rex-icons` and other one for Github pages `./docs`.   
+The build task will generate a NPM package ready to be published and also a static version of Storybook, one folder for NPM `./build/node_modules/__COMPONENT_NAME__` and other one for Github pages `./docs`.   
 
 ```
 npm run build
@@ -132,14 +132,14 @@ Build the project first.
 After that run the following commands:
 
 ```
-cd build/node_modules/rex-icons
+cd build/node_modules/__COMPONENT_NAME__
 npm login
 npm publish
 ```
 
 Once the process finish, take a look to the NPM site:   
 
-https://www.npmjs.com/package/rex-icons
+https://www.npmjs.com/package/__COMPONENT_NAME__
 
 ## How to test
 
