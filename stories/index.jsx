@@ -6,7 +6,6 @@ import { checkA11y } from '@storybook/addon-a11y';
 import { withInspectHtml } from 'storybook-inspecthtml';
 import LinkTo from '@storybook/addon-links/react';
 import CenterDecorator from '../.storybook/centerDecorator';
-import 'rex-core';
 import 'rex-text';
 
 import IconList from '../src/IconList';
