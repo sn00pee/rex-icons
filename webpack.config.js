@@ -161,11 +161,7 @@ const npmReadmePlugin = new CopyWebpackPlugin([
       return content
         .toString()
         .replace(/__COMPONENT_NAME__/g, packageInfo.name)
-        .replace(/__VERSION__/g, packageInfo.version)
-        .replace(
-          /__REX_CORE_VERSION__/g,
-          packageInfo.dependencies['rex-core'].replace('^', '')
-        );
+        .replace(/__VERSION__/g, packageInfo.version);
     },
   },
 ]);
@@ -210,11 +206,7 @@ const mdReadmePlugin = new CopyWebpackPlugin([
       return content
         .toString()
         .replace(/__COMPONENT_NAME__/g, packageInfo.name)
-        .replace(/__VERSION__/g, packageInfo.version)
-        .replace(
-          /__REX_CORE_VERSION__/g,
-          packageInfo.dependencies['rex-core'].replace('^', '')
-        );
+        .replace(/__VERSION__/g, packageInfo.version);
     },
   },
 ]);
