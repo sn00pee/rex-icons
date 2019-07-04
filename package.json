@@ -1,6 +1,6 @@
 {
   "name": "rex-icons",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "ReX React UI Component",
   "main": "src/Icon.jsx",
   "scripts": {
