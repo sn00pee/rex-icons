@@ -366,7 +366,7 @@ body {
 
 /*!
  * 
- * @license rex-icons v1.3.2 2019-07-05
+ * @license rex-icons v1.3.3 2019-07-05
  * rex-icons.production.min.css
  * 
  * Copyright (c) 2018-present, Rakuten, Inc.
@@ -1057,6 +1057,10 @@ body {
 
 .rex-icon.zoom-out-outline:before {
   content: "\f1e0"; }
+
+.rex-icon {
+  line-height: unset;
+  display: inline-block; }
 
 
 /*# sourceMappingURL=vendors~main.css.map*/
