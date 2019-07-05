@@ -4,7 +4,7 @@ const list = {};
 svgIcons.keys().forEach(icon => {
   const name = icon
     .replace('./rexicon-32-', '')
-    .replace('-filled.svg', '')
+    .replace('-fill.svg', '')
     .replace(/-outlined?\.svg/, '')
     .replace('.svg', '');
 
@@ -23,7 +23,7 @@ svgIcons.keys().forEach(icon => {
 svgIcons.keys().forEach(icon => {
   const name = icon
     .replace('./rexicon-32-', '')
-    .replace('-filled.svg', '')
+    .replace('-fill.svg', '')
     .replace(/-outlined?.svg/, '')
     .replace('.svg', '');
   const iconClassName = icon
@@ -31,7 +31,7 @@ svgIcons.keys().forEach(icon => {
     .replace('.svg', '')
     .replace('./', '');
 
-  if (icon.indexOf('-filled.svg') !== -1) {
+  if (icon.indexOf('-fill.svg') !== -1) {
     list[name].isFilled = true;
     list[name].filled = iconClassName;
   } else if (icon.search(/-outlined?.svg/) !== -1) {

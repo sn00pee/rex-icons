@@ -16,7 +16,7 @@
     "build:component": "NODE_ENV=production ./node_modules/.bin/webpack --mode=production --config webpack.config.js",
     "build:storybook": "NODE_ENV=production ./node_modules/.bin/build-storybook -c .storybook -o docs",
     "commit": "npm run commit:docs && npm run commit:package",
-    "commit:docs": "git add docs README.md && git commit -m 'Added - Docs for github pages and README file'",
+    "commit:docs": "git add docs README.md && g一部it commit -m 'Added - Docs for github pages and README file'",
     "commit:package": "git add package.json package-lock.json && git commit -m 'New version - v'$npm_package_version",
     "commit:html": "git add docs/html && git commit -m 'Added - Static HTML for github pages'",
     "storybook": "NODE_ENV=development ./node_modules/.bin/start-storybook -p 8080 --ci",
