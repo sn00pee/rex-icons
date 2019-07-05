@@ -2,6 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import { composeClassName } from 'rex-react-utils';
 import './css/rex-icons.css';
+import './Icon.scss';
 
 export default function Icon({ name, className }) {
   const iconName = `rex-icon ${name}`;
