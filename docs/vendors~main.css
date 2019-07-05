@@ -1058,5 +1058,9 @@ body {
 .rex-icon.zoom-out-outline:before {
   content: "\f1e0"; }
 
+.rex-icon {
+  line-height: unset;
+  display: inline-block; }
+
 
 /*# sourceMappingURL=vendors~main.css.map*/
