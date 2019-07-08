@@ -2,3 +2,33 @@
     line-height: unset;
     display: inline-block;
   }
+  .sns-facebook-color {
+    color: #1877F2;
+  }
+  .sns-instagram-color {
+    color: #CE0072;
+  }
+  .sns-line-color {
+    color: #00B900;
+  }
+  .sns-linkedin-color {
+    color: #2867B2;
+  }
+  .sns-pintrest-color {
+    color: #E60023;
+  }
+  .sns-twitter-circle-color,
+  .sns-twitter-square-color {
+    color: #1DA1F2;
+  }
+  .sns-viber-color {
+    color: #665CAC;
+  }
+  .sns-whats-up-color {
+    background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sns-youtube-color {
+    color: #FF0000;
+  }
