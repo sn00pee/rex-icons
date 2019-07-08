@@ -158,26 +158,10 @@ SnsIconList.forEach(icon => {
         base: iconName,
       };
       const classNameIcon = radios('Icon color', options, colorClassName);
-      let iconClassName = icon.original;
-
-      if (icon.isFilled && icon.isLined) {
-        const isFilled = boolean('Filled', true);
-        iconClassName = icon.lined;
-
-        if (isFilled) {
-          iconClassName = icon.filled;
-        }
-      }
-      if (icon.isFilled && !icon.isLined) {
-        iconClassName = icon.filled;
-      }
-      if (!icon.isFilled && icon.isLined) {
-        iconClassName = icon.lined;
-      }
 
       return (
         <div key={icon.filled} className="text-extra-large">
-          <Icon name={iconClassName} className={classNameIcon} />
+          <Icon name={classNameIcon} />
         </div>
       );
     });
