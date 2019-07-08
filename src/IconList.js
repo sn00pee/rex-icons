@@ -44,9 +44,14 @@ svgIcons.keys().forEach(icon => {
 });
 
 const IconList = [];
+const SnsIconList = [];
 // eslint-disable-next-line
 for (const x in list) {
   IconList.push(list[x]);
+
+  if (x.includes('sns-')) {
+    SnsIconList.push(list[x]);
+  }
 }
 
-export default IconList;
+export { IconList, SnsIconList };
