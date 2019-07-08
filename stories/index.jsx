@@ -100,7 +100,8 @@ stories.add('list', () => {
 
 // Dynamic stories for logos
 IconList.forEach(icon => {
-  const storiesSub = storiesOf('Rakuten Icons', module);
+  const category = icon.name.charAt(0).toUpperCase();
+  const storiesSub = storiesOf(`Rakuten Icons/${category}`, module);
   storiesSub.addDecorator(withInspectHtml);
   storiesSub.addDecorator(withKnobs);
 
@@ -141,35 +142,44 @@ IconList.forEach(icon => {
 
 // SNS icons
 SnsIconList.forEach(icon => {
-  const storiesSns = storiesOf('SNS Icons', module);
-  const classNameIcon = text('Dynamic classname', '');
+  const category = icon.name.charAt(0).toUpperCase();
+  const storiesSns = storiesOf(`SNS Icons/${category}`, module);
+  const iconName = icon.name.substring(2);
   storiesSns.addDecorator(withInspectHtml);
   storiesSns.addDecorator(CenterDecorator);
   storiesSns.addDecorator(checkA11y);
   storiesSns.addDecorator(withKnobs);
 
-  storiesSns.add(icon.name, () => {
-    let iconClassName = icon.original;
+  if (!iconName.includes('-color')) {
+    storiesSns.add(icon.name, () => {
+      const colorClassName = `${iconName}-color`;
+      const options = {
+        color: `${colorClassName}`,
+        base: iconName,
+      };
+      const classNameIcon = radios('Icon color', options, colorClassName);
+      let iconClassName = icon.original;
 
-    if (icon.isFilled && icon.isLined) {
-      const isFilled = boolean('Filled', true);
-      iconClassName = icon.lined;
+      if (icon.isFilled && icon.isLined) {
+        const isFilled = boolean('Filled', true);
+        iconClassName = icon.lined;
 
-      if (isFilled) {
+        if (isFilled) {
+          iconClassName = icon.filled;
+        }
+      }
+      if (icon.isFilled && !icon.isLined) {
         iconClassName = icon.filled;
       }
-    }
-    if (icon.isFilled && !icon.isLined) {
-      iconClassName = icon.filled;
-    }
-    if (!icon.isFilled && icon.isLined) {
-      iconClassName = icon.lined;
-    }
+      if (!icon.isFilled && icon.isLined) {
+        iconClassName = icon.lined;
+      }
 
-    return (
-      <div key={icon.filled} className="text-extra-large">
-        <Icon name={iconClassName} className={classNameIcon} />
-      </div>
-    );
-  });
+      return (
+        <div key={icon.filled} className="text-extra-large">
+          <Icon name={iconClassName} className={classNameIcon} />
+        </div>
+      );
+    });
+  }
 });
