@@ -100,11 +100,12 @@ stories.add('list', () => {
 
 // Dynamic stories for logos
 IconList.forEach(icon => {
-  const storiesSub = storiesOf('Rakuten Icons', module);
+  const category = icon.name.charAt(0).toUpperCase();
+  const storiesSub = storiesOf(`Rakuten Icons/${category}`, module);
   storiesSub.addDecorator(withInspectHtml);
   storiesSub.addDecorator(withKnobs);
 
-  storiesSub.add(icon.name.substring(2), () => {
+  storiesSub.add(icon.name, () => {
     let iconClassName = icon.original;
 
     if (icon.isFilled && icon.isLined) {
@@ -141,7 +142,8 @@ IconList.forEach(icon => {
 
 // SNS icons
 SnsIconList.forEach(icon => {
-  const storiesSns = storiesOf('SNS Icons', module);
+  const category = icon.name.charAt(0).toUpperCase();
+  const storiesSns = storiesOf(`SNS Icons/${category}`, module);
   const iconName = icon.name.substring(2);
   storiesSns.addDecorator(withInspectHtml);
   storiesSns.addDecorator(CenterDecorator);
@@ -149,7 +151,7 @@ SnsIconList.forEach(icon => {
   storiesSns.addDecorator(withKnobs);
 
   if (!iconName.includes('-color')) {
-    storiesSns.add(iconName, () => {
+    storiesSns.add(icon.name, () => {
       const colorClassName = `${iconName}-color`;
       const options = {
         color: `${colorClassName}`,
