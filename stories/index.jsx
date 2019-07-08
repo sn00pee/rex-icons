@@ -8,7 +8,7 @@ import LinkTo from '@storybook/addon-links/react';
 import CenterDecorator from '../.storybook/centerDecorator';
 import 'rex-text';
 
-import IconList from '../src/IconList';
+import { IconList, SnsIconList } from '../src/IconList';
 
 const Icon =
   process.env.NODE_ENV === 'production'
@@ -100,8 +100,7 @@ stories.add('list', () => {
 
 // Dynamic stories for logos
 IconList.forEach(icon => {
-  const category = icon.name.charAt(0).toUpperCase();
-  const storiesSub = storiesOf(`Rakuten Icons/${category}`, module);
+  const storiesSub = storiesOf('Rakuten Icons', module);
   storiesSub.addDecorator(withInspectHtml);
   storiesSub.addDecorator(withKnobs);
 
@@ -137,5 +136,40 @@ IconList.forEach(icon => {
     });
 
     return <React.Fragment>{list}</React.Fragment>;
+  });
+});
+
+// SNS icons
+SnsIconList.forEach(icon => {
+  const storiesSns = storiesOf('SNS Icons', module);
+  const classNameIcon = text('Dynamic classname', '');
+  storiesSns.addDecorator(withInspectHtml);
+  storiesSns.addDecorator(CenterDecorator);
+  storiesSns.addDecorator(checkA11y);
+  storiesSns.addDecorator(withKnobs);
+
+  storiesSns.add(icon.name, () => {
+    let iconClassName = icon.original;
+
+    if (icon.isFilled && icon.isLined) {
+      const isFilled = boolean('Filled', true);
+      iconClassName = icon.lined;
+
+      if (isFilled) {
+        iconClassName = icon.filled;
+      }
+    }
+    if (icon.isFilled && !icon.isLined) {
+      iconClassName = icon.filled;
+    }
+    if (!icon.isFilled && icon.isLined) {
+      iconClassName = icon.lined;
+    }
+
+    return (
+      <div key={icon.filled} className="text-extra-large">
+        <Icon name={iconClassName} className={classNameIcon} />
+      </div>
+    );
   });
 });
